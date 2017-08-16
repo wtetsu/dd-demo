@@ -1,0 +1,15 @@
+.parent {
+  border-style:solid;
+  float:left;
+  width:200px;
+  height:700px;
+  margin-right:20px;
+}
+
+.child {
+  border-width:1px;
+  border-style:solid;
+  float:left;
+  width:200px;
+  height:150px;
+}

@@ -1,16 +1,16 @@
 <html>
     <head>
+        <meta charset="utf-8"/>
         <title></title>
+        <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <button id="btn01">xxx</button>
+        <input id="btnShow" type="button" value="現在のデータ状態を表示"/>
         <div id="app">
-            <button v-on:click="counter += 1">Add</button>
-            <p>{{counter}}</p>
-            <div style="border-style:solid;float:left;width:200px;margin-right:20px;" v-for="parent in parents">
+            <div class="parent" v-for="parent in parents" :data-id="parent.id">
                 {{ parent.name }}
-                <div class="child" style="border-width:1px;border-style:solid;float:left;width:200px;height:150px;" v-for="child in parent.children">
-                    {{ child.name }}
+                <div class="child" v-for="child in parent.children" :data-id="child.id" v-bind:style="{ backgroundColor: child.color }">
+                    {{ child.name }}({{ child.id }})
                 </div>
             </div>
         </div>

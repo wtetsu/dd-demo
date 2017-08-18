@@ -1,0 +1,23 @@
+{
+  "name": "dd-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "jquery-ui-bundle": "^1.12.1",
+    "vue": "^2.4.2"
+  },
+  "devDependencies": {
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.5.5"
+  },
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "license": "MIT"
+}

@@ -1,9 +1,12 @@
+const $ = require("jquery");
+require("jquery-ui-bundle");
+const Vue = require("vue");
 
 var _id = 0;
 
 function createRandomColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
+  var letters = "0123456789ABCDEF";
+  var color = "#";
   for (var i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
   }
@@ -106,11 +109,11 @@ function insertEntity(data, bottomId, topId, offset) {
   var bottom = findEntity(data, bottomId);
   var top = findEntity(data, topId);
   if (bottom && top) {
-    var movindEntity = data.parents[top.pIndex].children.splice(top.cIndex, 1)[0];
+    var movingEntity = data.parents[top.pIndex].children.splice(top.cIndex, 1)[0];
     if (bottom.cIndex >= 0) {
-      data.parents[bottom.pIndex].children.splice(bottom.cIndex+offset, 0, movindEntity);
+      data.parents[bottom.pIndex].children.splice(bottom.cIndex+offset, 0, movingEntity);
     } else {
-      data.parents[bottom.pIndex].children.push(movindEntity);
+      data.parents[bottom.pIndex].children.push(movingEntity);
     }
   }
 }
